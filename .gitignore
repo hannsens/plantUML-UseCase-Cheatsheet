@@ -42,8 +42,5 @@
 # Files created by LaTeX Other: 
 *.run.xml
 *.syntex.gz
-
-
-
-/Material
-/plantuml/*.pdf
+Material/
+plantuml/*.pdf

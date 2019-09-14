@@ -1,0 +1,37 @@
+@startuml
+skinparam DefaultFontName "Lucida Sans Typewriter"
+
+skinparam UseCase{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+skinparam Note{
+    BorderColor DarkSlateBlue
+    BackgroundColor LightYellow
+}
+
+skinparam Actor{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+
+skinparam ArrowColor DarkSlateBlue
+
+'wie immer wurde die Richtung gedreht:
+left to right direction
+
+actor :Personaler: as personaler
+
+'nach oben dann mit nur einem Bindestrich:
+(Kündigen aussprechen \n <i> oben </i>)- personaler 
+
+'nach unten durch vertauschen von Akteurin und UseCase
+personaler - (Bewerbungsgespräche führen  \n <i> unten </i>)
+
+'seitlich nach rechts mit zwei Strichen
+personaler -- (Beförderungsverfahren eröffnen  \n <i> rechts </i>)
+
+'seitlich nach links mit Vertauschten Positionen
+(Abmahnungnen aussprechen \n <i> links </i>) -- personaler
+
+@enduml

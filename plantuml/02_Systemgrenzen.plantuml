@@ -1,0 +1,35 @@
+@startuml
+skinparam DefaultFontName "Lucida Sans Typewriter"
+
+skinparam UseCase{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+skinparam Note{
+    BorderColor DarkSlateBlue
+    BackgroundColor LightYellow
+}
+
+skinparam Actor{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+
+skinparam ArrowColor DarkSlateBlue
+
+'Generell zum Lesen von Use-Case-Diagrammen einfacher:
+left to right direction
+
+actor :Kundin: as customer
+
+'Definition der Systemgrenze über rectangle{}
+rectangle Shopsystem {
+
+ usecase (Ware \n bestellen) as bestellen
+
+ 'Kurzform ohne Deklaration des UseCases:
+ customer -- (informieren)
+
+ customer -- bestellen
+}
+@enduml

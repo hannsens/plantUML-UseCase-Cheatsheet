@@ -1,0 +1,35 @@
+@startuml
+skinparam DefaultFontName "Lucida Sans Typewriter"
+
+skinparam UseCase{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+skinparam Note{
+    BorderColor DarkSlateBlue
+    BackgroundColor LightYellow
+}
+
+skinparam Actor{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+
+skinparam ArrowColor DarkSlateBlue
+
+'Generell zum Lesen von Use-Case-Diagrammen einfacher:
+left to right direction
+
+actor :Mitarbeiterin: as mitarbeiter
+
+rectangle Vertragswesen {
+usecase (Vertrag \n ausfertigen) as ausfertigen
+usecase (Vertrag \n ausdrucken) as drucken
+
+mitarbeiter -- ausfertigen
+
+'Die gestrichelte Linie wird per .> angegeben
+'und das Stereotyp nach dem Doppelpunkt:
+ausfertigen .> drucken : <<include>>
+}
+@enduml

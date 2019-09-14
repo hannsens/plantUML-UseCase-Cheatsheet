@@ -1,0 +1,29 @@
+@startuml
+
+skinparam DefaultFontName "Lucida Sans Typewriter"
+
+skinparam UseCase{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+skinparam Note{
+    BorderColor DarkSlateBlue
+    BackgroundColor LightYellow
+}
+
+skinparam Actor{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+
+skinparam ArrowColor DarkSlateBlue
+
+left to right direction
+actor :Akteur:
+rectangle System {
+usecase Anwendungsfall  
+Akteur -- Anwendungsfall
+note top on link
+Notiz...
+end note
+@enduml

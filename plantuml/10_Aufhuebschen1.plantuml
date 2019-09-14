@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor :Akteur:
+rectangle System {
+usecase Anwendungsfall  
+Akteur -- Anwendungsfall
+note top on link
+Notiz...
+end note
+@enduml

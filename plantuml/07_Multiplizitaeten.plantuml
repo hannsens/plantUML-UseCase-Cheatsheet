@@ -1,0 +1,34 @@
+@startuml
+skinparam DefaultFontName "Lucida Sans Typewriter"
+
+skinparam UseCase{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+skinparam Note{
+    BorderColor DarkSlateBlue
+    BackgroundColor LightYellow
+}
+
+skinparam Actor{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+
+skinparam ArrowColor DarkSlateBlue
+
+'Generell zum Lesen von Use-Case-Diagrammen einfacher:
+left to right direction
+
+actor :Spielerin: as player
+actor :Schiedsrichterin: as referee
+
+rectangle Tischtennis {
+usecase (Rundlauf) as rundlauf
+
+'Multiplizitäten werden an den Assoziatoinen angegeben
+player "3..*" --- "1" rundlauf
+referee "0..*" --- "0..1" rundlauf
+}	  
+
+@enduml

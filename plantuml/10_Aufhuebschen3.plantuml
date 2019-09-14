@@ -1,0 +1,21 @@
+@startuml
+
+' Welchs Schriften gibt es auf dem System?
+' listfonts als plantUML-Kommando gibt's aus.
+skinparam DefaultFontName "FG Virgil"
+skinparam handwritten true
+skinparam monochrome true
+skinparam packageStyle rect
+skinparam shadowing false
+
+left to right direction
+
+actor :Akteur:
+rectangle System {
+usecase Anwendungsfall  
+Akteur -- Anwendungsfall
+note top on link
+Notiz...
+end note
+}
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+skinparam DefaultFontName "Lucida Sans Typewriter"
+
+skinparam UseCase{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+skinparam Note{
+    BorderColor DarkSlateBlue
+    BackgroundColor LightYellow
+}
+
+skinparam Actor{
+    BorderColor DarkSlateBlue
+    BackgroundColor whitesmoke
+}
+
+skinparam ArrowColor DarkSlateBlue
+
+'Generell zum Lesen von Use-Case-Diagrammen einfacher:
+left to right direction
+
+actor :Bezahldienstleister: as bezahl
+actor :Kundin: as kundin
+rectangle OnlineShop {
+	usecase (Artikel kaufen) as kauf
+}
+kundin --> kauf
+kauf --> bezahl
+
+@enduml

@@ -1,4 +1,4 @@
-# plantUML-UseCase-Cheatsheet
+# plantUML-UseCase-InfoSheet
 Info-sheet about UML-Use-Case-Diagramms, german language
 
 Explaining the importaint details of UML use-case-diagrams.
